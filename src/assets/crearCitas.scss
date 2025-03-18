@@ -1,0 +1,99 @@
+// Variables de colores y estilos
+$primary-color: #2b7a78;
+$secondary-color: #3aafa9;
+$background-gradient: linear-gradient(135deg, #17252a, #2b7a78);
+$glass-bg: rgba(255, 255, 255, 0.2);
+$border-color: rgba(255, 255, 255, 0.3);
+$text-color: #ffffff;
+$input-bg: rgba(255, 255, 255, 0.15);
+$button-hover: lighten($primary-color, 10%);
+$font-family: 'Poppins', sans-serif;
+
+.fondo-pantalla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $background-gradient;
+  font-family: $font-family;
+
+  .crear-cita-container {
+    background: $glass-bg;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid $border-color;
+
+    h2 {
+      color: $text-color;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background: $input-bg;
+      color: white;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid $border-color;
+      margin-bottom: 15px;
+
+      option {
+        background: #17252a;
+        color: white;
+      }
+
+      &:focus {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    // Estilos del DatePicker
+    :deep(.dp__input) {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background: $input-bg;
+      color: white;
+      outline: none;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid $border-color;
+      margin-bottom: 15px;
+
+      &:focus {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: $primary-color;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      margin-top: 10px;
+
+      &:hover {
+        background: $button-hover;
+      }
+    }
+  }
+}
