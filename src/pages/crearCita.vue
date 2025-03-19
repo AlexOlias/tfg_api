@@ -86,7 +86,7 @@
         text: datos.msg,
       });
   
-      setTimeout(() => router.push('/citas'), 2000);
+      setTimeout(() => router.push('/verCitas'), 2000);
     } catch (error) {
       Swal.fire({
         icon: 'error',

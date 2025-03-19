@@ -64,7 +64,7 @@
       const datos = await respuesta.json();
       localStorage.setItem('token', datos.access_token);
       Swal.fire('Inicio de sesión exitoso', 'Bienvenido', 'success');
-      router.push('/citas');
+      router.push('/verCitas');
   
       // Inicia el temporizador de inactividad
       reiniciarTemporizador();

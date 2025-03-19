@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../pages/registro.vue'
 import LoginView from '../pages/login.vue'
 import registro from '../pages/registro.vue'
+import crearCita from '../pages/crearCita.vue'
+import VerCitas from '../pages/verCitas.vue'
 
 
 const router = createRouter({
@@ -22,6 +24,16 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: LoginView,
+    },
+    {
+      path: '/crearCitas',
+      name: 'crearCitas',
+      component: crearCita,
+    },
+    {
+      path: '/verCitas',
+      name: 'verCitas',
+      component: VerCitas,
     },
   ],
 })
